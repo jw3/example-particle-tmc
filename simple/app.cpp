@@ -13,7 +13,7 @@
 
 SYSTEM_MODE(MANUAL)
 
-TMC5160Stepper driver(CS_PIN, R_SENSE, SW_MOSI, SW_MISO, SW_SCK);
+TMC5160Stepper driver(CS_PIN, R_SENSE);
 
 void setup() {
    RGB.control(true);
