@@ -31,4 +31,4 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake ${CONAN_CMAKE_MODULE_PATH} ${CMA
 find_package(Particle)
 include(TMCStepper)
 
-add_particle_remote_app(firmware TMCStepper)
+add_particle_remote_app(simple TMCStepper)
