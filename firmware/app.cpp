@@ -7,15 +7,18 @@
  *
  */
 
+#include <Particle.h>
 #include <TMCStepper.h>
 
-#define EN_PIN           38 // Enable
-#define DIR_PIN          55 // Direction
-#define STEP_PIN         54 // Step
-#define CS_PIN           42 // Chip select
-#define SW_MOSI          66 // Software Master Out Slave In (MOSI)
-#define SW_MISO          44 // Software Master In Slave Out (MISO)
-#define SW_SCK           64 // Software Slave Clock (SCK)
+SYSTEM_MODE(MANUAL)
+
+#define DIR_PIN           6 // Direction
+#define EN_PIN            7 // Enable
+#define STEP_PIN          8 // Step
+#define CS_PIN           14 // Chip select
+#define SW_MOSI          12 // Software Master Out Slave In (MOSI)
+#define SW_MISO          11 // Software Master In Slave Out (MISO)
+#define SW_SCK           13 // Software Slave Clock (SCK)
 #define SW_RX            63 // TMC2208/TMC2224 SoftwareSerial receive pin
 #define SW_TX            40 // TMC2208/TMC2224 SoftwareSerial transmit pin
 #define SERIAL_PORT Serial1 // TMC2208/TMC2224 HardwareSerial port
@@ -42,13 +45,16 @@ TMC5160Stepper driver(CS_PIN, R_SENSE, SW_MOSI, SW_MISO, SW_SCK);
 //TMC2209Stepper driver(SW_RX, SW_TX, R_SENSE, DRIVER_ADDRESS);
 
 void setup() {
+   RGB.control(true);
+   RGB.color(255,128,0);
+
    pinMode(EN_PIN, OUTPUT);
    pinMode(STEP_PIN, OUTPUT);
    pinMode(DIR_PIN, OUTPUT);
    digitalWrite(EN_PIN, LOW);      // Enable driver in hardware
 
    // Enable one according to your setup
-//SPI.begin();                    // SPI drivers
+   SPI.begin();                    // SPI drivers
 //SERIAL_PORT.begin(115200);      // HW UART drivers
 //driver.beginSerial(115200);     // SW UART drivers
 
