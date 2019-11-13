@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.0)
 
 if (NOT FIRMWARE_DIR)
     set(FIRMWARE_DIR /usr/local/src/particle/firmware)
