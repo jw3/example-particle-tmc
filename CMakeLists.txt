@@ -34,4 +34,5 @@ include(TMCStepper)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
 add_particle_remote_app(simple TMCStepper)
+add_particle_remote_app(accel TMCStepper)
 add_particle_remote_app(pwm TMCStepper)
