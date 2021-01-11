@@ -18,7 +18,7 @@ TMC5160Stepper driver = TMC5160Stepper(CS_PIN, R_SENSE);
 
 constexpr uint32_t steps_per_mm = 80;
 
-#include <AccelStepper.h>
+#include "AccelStepper.h"
 AccelStepper stepper = AccelStepper(1, STEP_PIN, DIR_PIN);
 
 void setup() {

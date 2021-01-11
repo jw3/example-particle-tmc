@@ -1,6 +1,6 @@
 [requires]
-  particle-common/snapshot@jw3/stable
-  TMCStepper/snapshot@jw3/stable
+  xenon/1.4.2@hicktech/particle
+  TMCStepper/v0.5.2@hicktech/stable
 
 [generators]
   cmake
